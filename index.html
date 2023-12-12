@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/b75a7b1098.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
+    <nav class="navbar" id="navbar">
         <div id="navbar-content">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo">
@@ -16,7 +16,14 @@
             </div>
             <ul>
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="">BISTMBM'24<i class="fa-solid fa-chevron-down"></i></a></li>
+                <li>
+                    <a href="">BISTMBM'24<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#">Alt Sayfa 2</a>
+                        <a href="#">Alt Sayfa 1</a>
+                        <a href="#">Alt Sayfa 3</a>
+                    </div>
+                </li>
                 <li><a href="pages/aboutus.html">Hakkımızda</a></li>
                 <li><a href="pages/fqa.html">SSS</a></li>
                 <li><a href="pages/contact.html">İletişim</a></li>
@@ -43,23 +50,22 @@
             <i class="fa-solid fa-arrow-down"></i>
         </div>
         <div id="komiteler-section-2">
-            <div class="slider-selector">
+            <div class="slider-container">
                 <div class="slider">
-                    <img id="slide-1" src="img/exam.png" alt="komite">
-                    <img id="slide-2" src="img/exam.png" alt="komite">
-                    <img id="slide-3" src="img/exam.png" alt="komite">
+                  <div class="slide" id="slide1"><img src="img/exam.png" alt="Slide 1"><div class="button" id="komite-button"><a href="#"><button>Komiteye Göz At</button></a></div></div>
+                  <div class="slide" id="slide2"><img src="img/exam.png" alt="Slide 2"><div class="button" id="komite-button"><a href="#"><button>Komiteye Göz At</button></a></div></div>
+                  <div class="slide" id="slide3"><img src="img/exam.png" alt="Slide 3"><div class="button" id="komite-button"><a href="#"><button>Komiteye Göz At</button></a></div></div>
                 </div>
-                <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                </div>
-            </div>
+                <div class="arrow" id="left-arrow">&lt;</div>
+                <div class="arrow" id="right-arrow">&gt;</div>
+                
+            </div>              
         </div>
     </section>
     <footer>
         <p>BISTMBM</p>
         <p>e-posta</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
