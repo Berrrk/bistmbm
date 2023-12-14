@@ -1,0 +1,99 @@
+:root {
+    --main-bg-color: #000;
+    --main-text-color: white;
+    --main-aqua-color: #00E4FF;
+    --secondary-color: #024B54;
+    --main-red-color: #FF0000;
+    --main-text-color: white;
+    --main-font-family: sans-serif;
+    --secondary-font-family: sans-serif;
+}
+
+
+/* Kısım - Komiteler - Başlangıç */
+
+section#komiteler {
+    border-top: 2px solid #024B54;
+    border-bottom: 2px solid #024B54;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+#komiteler {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+#komiteler-section-1 h1{
+  font-size: 2rem;
+}
+
+/* Slide Galeri - Başlangıç */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+
+.slide img {
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000000;
+}
+
+.slider-container button {
+  position: relative;
+  padding: 15px 40px;
+  font-weight: 600;
+  font-size: 20px;
+  bottom: 200px;
+  cursor: pointer;
+  border: 2px solid ;
+  background-color: #000000;
+  color: #00E4FF;
+  box-shadow: 5px 5px #000000;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.slider-container button:hover {
+  background-color: #00E4FF;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px #000000, 0px 0px 40px #00E4FF;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+#left-arrow {
+  left: 30px;
+}
+
+#right-arrow {
+  right: 30px;
+}
+
+/* Slide Galeri - Bitiş */
+
+/* Kısım - Komiteler - Bitiş */
