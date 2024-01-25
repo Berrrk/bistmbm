@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap');
+
+::selection {
+    background-color: rgba(116, 195, 214, 0.459);
+}
+
+:root {
+    /* Fonts */
+    --main-fontfamily: 'Inter', sans-serif;
+    
+    /* Font Weights */
+    --caption2-weight: 400;
+    --caption2-strong-weight: 600; 
+    --caption1-weight: 400;
+    --caption1-strong-weight: 600; 
+    --caption1-stronger-weight: 700;
+    --body1-weight: 400;
+    --body1-strong-weight: 600;
+    --body1-stronger-weight: 700;
+    --body2-weight: 400;
+    --subtitle2-weight: 600;
+    --subtitle2-stronger-weight: 700;
+    --subtitle1-weight: 600;
+    --title3-weight: 600;
+    --title2-weight: 600;
+    --title1-weight: 600;
+    --largetitle-weight: 600;
+    --display-weight: 600;
+
+    /* Font Sizes */
+    --caption2-size: 10px;
+    --caption2-strong-size: 10px; 
+    --caption1-size: 12px;
+    --caption1-strong-size: 12px; 
+    --caption1-stronger-size: 12px;
+    --body1-size: 14px;
+    --body1-strong-size: 14px;
+    --body1-stronger-size: 14px;
+    --body2-size: 16px;
+    --subtitle2-size: 16px;
+    --subtitle2-stronger-size: 16px;
+    --subtitle1-size: 20px;
+    --title3-size: 24px;
+    --title2-size: 28px;
+    --title1-size: 32px;
+    --largetitle-size: 40px;
+    --display-size: 68px;
+
+    /* Font Line Heights */
+    --caption2-lineheight: 14px;
+    --caption2-strong-lineheight: 14px; 
+    --caption1-lineheight: 16px;
+    --caption1-strong-lineheight: 16px; 
+    --caption1-stronger-lineheight: 16px;
+    --body1-lineheight: 20px;
+    --body1-strong-lineheight: 20px;
+    --body1-stronger-lineheight: 20px;
+    --body2-lineheight: 22px;
+    --subtitle2-lineheight: 22px;
+    --subtitle2-stronger-lineheight: 22px;
+    --subtitle1-lineheight: 28px;
+    --title3-lineheight: 32px;
+    --title2-lineheight: 36px;
+    --title1-lineheight: 40px;
+    --largetitle-lineheight: 52px;
+    --display-lineheight: 92px;
+
+    /* Colors */
+    --main-bg-color: #000;
+    --primary-color: #00E4FF;
+    --secondary-color: #F90361;
+    --main-text-color: #fff;
+    --text-color-aqua: #00E4FF;
+    --text-color-green: #00FF19;
+    --primary-other-color: #0C3E60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+
+.textarea {
+    color: var(--primary-color);
+    font-family: "Inconsolata";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.main {
+    animation: fadeIn 4s ease-in-out forwards;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('assets/imgs/shutterstock_22838643132.png') center no-repeat;
+    width: 100%;
+    background-size: contain;
+    height: 100vh;
+    justify-content: center;
+    display: flex; 
+    animation: fade_in_main 4s ease-in-out forwards;
+}
+
+.konferans {
+    position: absolute;
+    left: 50px;
+    align-self: center;
+    animation: fade-in 3s ease-in-out forwards;
+    opacity: 0;
+}
+
+.counter {
+    color: #00E4FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.month {
+    margin-bottom: 20px;
+}
+
+#count1, #count2, #count3, #count4 {
+    font-size: 30pt;
+    font-family: "Inconsolata";
+}
+
+#month-span {
+    font-family: "Inconsolata";
+    font-size: 32px;
+}
+
+.count-container {
+    display: flex;
+}
+
+.count-item {
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 90px;
+    border: 1px solid var(--primary-color);
+}
+
+.slogan {
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    color: #00E4FF;
+}
+
+.logo-container-1 {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.user {
+    color: #00E4FF;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+@keyframes fade-in {
+    20% {
+      opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fade_in_main {
+    0% {
+        display: flex;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="designsystem.css" type="text/css">
+    <link rel="stylesheet" href="section2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b75a7b1098.js" crossorigin="anonymous"></script>
+
+    <title>BISTMBM'24</title>
+</head>
+<body>
+    <div class="main">
+        <div class="textarea">
+            <p>&gt;//bistmbm'24</p>
+            <p>&gt;//baglanti.basarili</p>
+        </div>
+
+        <div class="konferans">
+            <img src="assets/imgs/Konferans Tarihi.png" alt="Konfreans Tarihi" id="konferans-png" width="350px">
+        </div>
+
+        <div class="counter">
+            <div class="month">
+                <span id="month-span">Nisan</span>
+            </div>
+            <div class="count-container">
+                <div class="count-item">
+                    <span id="count1"></span>
+                </div>
+                <div class="count-item">
+                    <span id="count2"></span>
+                </div>
+                <div class="count-item">
+                    <span id="count3"></span>
+                </div>
+                <div class="count-item">
+                    <span id="count4"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slogan">
+            <p>#GelecekSeninleBaşlar</p>
+        </div>
+
+        <div class="user">
+            <p>User: admin</p>
+        </div>
+
+        <div class="logo-container-1">
+            <img src="assets/imgs/BahcesehirMBM_LogoV2.png" width="100px" alt="BİSTMBM'24 Logo">
+        </div>
+    </div>
+
+    <script>
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+const countElements = document.querySelectorAll('.count-item span');
+
+
+countElements.forEach((span) => {
+    span.textContent = getRandomNumber(70, 100);
+});
+
+
+function startFallAnimation() {
+    const targetValues = [27, 28, 29, 30];
+    const durations = [700, 700, 700, 700];
+    function fallAnimation() {
+        countElements.forEach((span, index) => {
+            const currentNumber = parseInt(span.textContent);
+            const targetNumber = targetValues[index];
+
+            if (currentNumber > targetNumber) {
+                span.textContent = currentNumber - 1;
+            }
+
+            if (currentNumber === targetNumber && index === countElements.length - 1) {
+                return;
+            }
+        });
+
+        setTimeout(fallAnimation, Math.max(...durations) / 10); 
+    }
+
+    fallAnimation();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(startFallAnimation, 100);
+});
+    </script>
+</body>
+</html>
